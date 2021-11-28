@@ -14,9 +14,8 @@ class NewsViewModel: ViewModel() {
     fun onCreate() {
         viewModelScope.launch {
             val result = getNewsUseCase()
-            if (result !== null) {
-                newsModel.postValue(result)
-            }
+            newsModel.postValue(result)
+
         }
     }
 
