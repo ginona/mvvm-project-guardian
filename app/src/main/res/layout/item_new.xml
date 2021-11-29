@@ -5,11 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/imgNew"
+        android:layout_width="66dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvNew"
-        android:layout_width="295dp"
-        android:layout_height="34dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:paddingEnd="10dp"
         android:text="Testing New"
         android:textSize="16sp"
@@ -69,6 +78,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="390dp" />
+        app:layout_constraintGuide_begin="379dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

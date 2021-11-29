@@ -18,11 +18,4 @@ class NewsViewModel: ViewModel() {
 
         }
     }
-
-    fun getNews() {
-        //val currentNew: NewsModel = NewsProvider.returnApi()
-        //newsModel.postValue(currentNew)
-    }
-
-
 }

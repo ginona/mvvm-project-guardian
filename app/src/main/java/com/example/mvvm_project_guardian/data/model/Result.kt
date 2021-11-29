@@ -9,7 +9,7 @@ data class Result (
     val webTitle: String?,
     val webUrl: String?,
     val apiUrl: String?,
-    val blocks: Blocks?,
+    val fields: Field?,
     val isHosted: Boolean?,
     val pillarId: String?,
     val pillarName: String?

@@ -4,8 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.api.load
 import com.example.mvvm_project_guardian.R
 
 class NewsAdapter(
@@ -27,8 +29,10 @@ class NewsAdapter(
 
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val title = view.findViewById(R.id.tvNew) as TextView
+        val image = view.findViewById<ImageView>(R.id.imgNew)
         fun bind(result: Result, context: Context){
             title.text = result.webTitle
+            image.load(result.fields?.thumbnail)
         }
     }
 
@@ -36,6 +40,6 @@ class NewsAdapter(
         if (results != null) {
             return results.size
         }
-        return 1
+        return 0
     }
 }

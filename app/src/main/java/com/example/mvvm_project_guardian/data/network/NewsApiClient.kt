@@ -11,6 +11,7 @@ interface NewsApiClient {
     suspend fun getAllNews(
         @Query("api-key") apiKey: String?,
         @Query("type") type: String?,
-        @Query("show-blocks") showBlocks: String?
+        @Query("show-blocks") showBlocks: String?,
+        @Query("show-fields") showFields: String?
     ): Response<NewsModel>
 }
