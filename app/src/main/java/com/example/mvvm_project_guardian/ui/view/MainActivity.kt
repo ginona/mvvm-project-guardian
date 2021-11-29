@@ -1,10 +1,7 @@
 package com.example.mvvm_project_guardian.ui.view
 
-import com.example.mvvm_project_guardian.data.model.Result
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager

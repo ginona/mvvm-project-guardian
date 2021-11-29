@@ -8,14 +8,14 @@ import retrofit2.Response
 
 class NewsService {
     private val retrofit = RetrofitHelper.getRetrofit()
-    val API_KEY = "83ee18cb-9e54-481f-929d-57d4b0cc87c1"
+    private val API_KEY = "83ee18cb-9e54-481f-929d-57d4b0cc87c1"
     val API_REQUEST_TYPE = "article"
-    val API_BLOCK_TYPE = "body"
-    val API_FIELDS = "all"
+    val API_FIELDS = "starRating,headline,thumbnail,short-url"
+    val API_PAGE_SIZE = "10"
 
     suspend fun getNews(): NewsModel{
         return withContext(Dispatchers.IO){
-            val response: Response<NewsModel> = retrofit.create(NewsApiClient::class.java).getAllNews(API_KEY, API_REQUEST_TYPE, API_BLOCK_TYPE, API_FIELDS)
+            val response: Response<NewsModel> = retrofit.create(NewsApiClient::class.java).getAllNews(API_KEY, API_REQUEST_TYPE, API_FIELDS, API_PAGE_SIZE)
             (response.body() ?: response.errorBody()) as NewsModel
         }
     }
