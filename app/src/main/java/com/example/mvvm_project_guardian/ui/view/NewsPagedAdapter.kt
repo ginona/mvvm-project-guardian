@@ -26,6 +26,7 @@ class NewsPagedAdapter: PagingDataAdapter<Result, NewsPagedAdapter.MyViewHolder>
         }
     }*/
 
+    //Direct bind to the exact xml
     inner class MyViewHolder(val binding: ItemNewBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
