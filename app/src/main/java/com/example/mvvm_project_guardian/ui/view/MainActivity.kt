@@ -7,7 +7,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.mvvm_project_guardian.R
 import com.example.mvvm_project_guardian.databinding.ActivityMainBinding
 import com.example.mvvm_project_guardian.ui.viewmodel.NewsViewModel
