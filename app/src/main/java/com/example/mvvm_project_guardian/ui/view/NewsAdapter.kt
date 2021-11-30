@@ -1,4 +1,5 @@
 package com.example.mvvm_project_guardian.ui.view
+
 import com.example.mvvm_project_guardian.data.model.Result
 import android.content.Context
 import android.view.LayoutInflater
