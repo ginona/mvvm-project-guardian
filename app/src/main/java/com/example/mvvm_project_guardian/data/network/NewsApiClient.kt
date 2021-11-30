@@ -12,7 +12,7 @@ interface NewsApiClient {
         @Query("api-key") apiKey: String?,
         @Query("type") type: String?,
         @Query("show-fields") showFields: String?,
-        @Query("page-size") pageSize: String?,
+        @Query("page") pageNumber: String?,
     ): Response<NewsModel>
 
 

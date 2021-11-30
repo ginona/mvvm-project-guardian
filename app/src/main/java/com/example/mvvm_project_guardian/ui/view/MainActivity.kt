@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         recyclerNews = findViewById(R.id.recyclerNews)
 
-        newsViewModel.onCreate()
+        newsViewModel.onCreate(1)
 
         recyclerNews.layoutManager = LinearLayoutManager(applicationContext);
         mAdapter = NewsAdapter(applicationContext, newsViewModel.newsModel.value?.response?.results)

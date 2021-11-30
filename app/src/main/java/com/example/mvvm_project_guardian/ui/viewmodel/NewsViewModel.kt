@@ -11,9 +11,9 @@ class NewsViewModel: ViewModel() {
     val newsModel = MutableLiveData<NewsModel>()
     var getNewsUseCase = GetNews()
 
-    fun onCreate() {
+    fun onCreate(pageNumber: Int) {
         viewModelScope.launch {
-            val result = getNewsUseCase()
+            val result = getNewsUseCase(pageNumber)
             newsModel.postValue(result)
 
         }

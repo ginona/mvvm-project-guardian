@@ -13,9 +13,10 @@ class NewsService {
     val API_FIELDS = "starRating,headline,thumbnail,short-url"
     val API_PAGE_SIZE = "10"
 
-    suspend fun getNews(): NewsModel{
+    suspend fun getNews(pageNumber: Int): NewsModel{
         return withContext(Dispatchers.IO){
-            val response: Response<NewsModel> = retrofit.create(NewsApiClient::class.java).getAllNews(API_KEY, API_REQUEST_TYPE, API_FIELDS, API_PAGE_SIZE)
+            val response: Response<NewsModel> = retrofit.create(NewsApiClient::class.java)
+                .getAllNews(API_KEY, API_REQUEST_TYPE, API_FIELDS, pageNumber.toString())
             (response.body() ?: response.errorBody()) as NewsModel
         }
     }

@@ -9,8 +9,8 @@ import com.google.gson.Gson
 class NewsRepository {
     private val api = NewsService()
 
-    suspend fun getAllNews(): NewsModel {
-        val response: NewsModel = api.getNews()
+    suspend fun getAllNews(pageNumber: Int): NewsModel {
+        val response: NewsModel = api.getNews(pageNumber)
         NewsProvider.news = response
         Log.w("Response", Gson().toJson(response))
         return response
