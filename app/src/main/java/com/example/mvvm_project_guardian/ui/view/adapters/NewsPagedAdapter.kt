@@ -10,7 +10,7 @@ import com.example.mvvm_project_guardian.databinding.ItemNewBinding
 import com.example.mvvm_project_guardian.ui.view.DiffUtilCallback
 
 
-class NewsPagedAdapter: PagingDataAdapter<Result, NewsPagedAdapter.MyViewHolder>(DiffUtilCallback()) {
+class NewsPagedAdapter(private val clickListener: (Result) -> Unit): PagingDataAdapter<Result, NewsPagedAdapter.MyViewHolder>(DiffUtilCallback()) {
 
     inner class MyViewHolder(val binding: ItemNewBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -24,6 +24,12 @@ class NewsPagedAdapter: PagingDataAdapter<Result, NewsPagedAdapter.MyViewHolder>
             imgNew.load(imageLink) {
                 crossfade(true)
                 crossfade(1000)
+            }
+        }
+
+        holder.itemView.setOnClickListener {
+            if (currentItem != null) {
+                clickListener(currentItem)
             }
         }
     }

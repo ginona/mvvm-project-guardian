@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvProduct"
+            android:id="@+id/tvNewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
@@ -43,13 +43,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imgProduct"
+            android:id="@+id/imgNew"
             android:layout_width="137dp"
             android:layout_height="220dp"
             android:src="@drawable/ic_launcher_background"
-            app:layout_constraintEnd_toEndOf="@id/guideline6"
-            app:layout_constraintStart_toStartOf="@id/guideline5"
-            app:layout_constraintTop_toBottomOf="@+id/tvProduct" />
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewTitle" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline4"
@@ -77,10 +77,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="395dp" />
+            app:layout_constraintGuide_begin="386dp" />
 
         <TextView
-            android:id="@+id/new_description"
+            android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New description"

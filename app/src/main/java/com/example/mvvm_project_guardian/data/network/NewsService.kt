@@ -10,7 +10,7 @@ class NewsService {
     private val retrofit = RetrofitHelper.getRetrofit()
     private val API_KEY = "83ee18cb-9e54-481f-929d-57d4b0cc87c1"
     val API_REQUEST_TYPE = "article"
-    val API_FIELDS = "starRating,headline,thumbnail,short-url"
+    val API_FIELDS = "starRating,headline,thumbnail,short-url,bodyText"
 
     suspend fun getNews(pageNumber: Int): NewsModel{
         return withContext(Dispatchers.IO){
