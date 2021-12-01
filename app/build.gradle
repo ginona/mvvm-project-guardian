@@ -42,9 +42,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     //ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
     //LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
 
     implementation "androidx.fragment:fragment-ktx:1.4.0"
     implementation "androidx.activity:activity-ktx:1.4.0"
@@ -61,6 +61,9 @@ dependencies {
     implementation 'androidx.paging:paging-common-ktx:3.1.0'
     implementation "androidx.paging:paging-runtime-ktx:3.1.0"
 
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
 
     // Coroutine Lifecycle Scopes
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
@@ -69,6 +72,7 @@ dependencies {
 
     //dagger-hilt
     implementation "com.google.dagger:hilt-android:2.33-beta"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "com.google.dagger:hilt-android-compiler:2.33-beta"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
     kapt "androidx.hilt:hilt-compiler:1.0.0"

@@ -19,7 +19,6 @@ class NewsViewModel: ViewModel() {
         viewModelScope.launch {
             val result = getNewsUseCase(pageNumber)
             newsModel.postValue(result)
-
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.mvvm_project_guardian.ui.view
+package com.example.mvvm_project_guardian.ui.view.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.example.mvvm_project_guardian.data.model.Result
 import com.example.mvvm_project_guardian.databinding.ItemNewBinding
+import com.example.mvvm_project_guardian.ui.view.DiffUtilCallback
 
 
 class NewsPagedAdapter: PagingDataAdapter<Result, NewsPagedAdapter.MyViewHolder>(DiffUtilCallback()) {

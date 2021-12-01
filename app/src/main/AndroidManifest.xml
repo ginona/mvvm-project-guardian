@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mvvmprojectguardian">
         <activity
-            android:name="com.example.mvvm_project_guardian.ui.view.MainActivity"
+            android:name="com.example.mvvm_project_guardian.ui.view.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

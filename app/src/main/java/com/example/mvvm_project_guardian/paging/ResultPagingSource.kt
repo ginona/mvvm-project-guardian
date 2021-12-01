@@ -1,6 +1,5 @@
 package com.example.mvvm_project_guardian.paging
 
-import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.mvvm_project_guardian.data.model.Result
