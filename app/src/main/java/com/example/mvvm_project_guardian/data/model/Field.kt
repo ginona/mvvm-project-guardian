@@ -34,5 +34,4 @@ data class Field (
             return arrayOfNulls(size)
         }
     }
-
 }

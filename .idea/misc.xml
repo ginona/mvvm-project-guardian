@@ -6,7 +6,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22291666666666668" />
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.45" />
         <entry key="app/src/main/res/layout/fragment_item.xml" value="0.19934143870314083" />
-        <entry key="app/src/main/res/layout/item_new.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/item_new.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/item_news.xml" value="0.165" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.240625" />
       </map>
     </option>
