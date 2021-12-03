@@ -16,4 +16,13 @@
     <style name="RoundedSquare">
         <item name="cornerSize">10%</item>
     </style>
+    <style name="LessRoundedSquare">
+        <item name="cornerSize">5%</item>
+    </style>
+    <style name="customRoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">0%</item>
+        <item name="cornerSizeBottomRight">5%</item>
+        <item name="cornerSizeBottomLeft">5%</item>
+    </style>
 </resources>
