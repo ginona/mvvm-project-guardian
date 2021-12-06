@@ -6,9 +6,11 @@ import android.os.Parcelable
 data class Field (
     val headline: String?,
     val thumbnail: String?,
-    val bodyText: String?
+    val bodyText: String?,
+    val byline: String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!
@@ -23,6 +25,7 @@ data class Field (
         parcel.writeString(headline)
         parcel.writeString(thumbnail)
         parcel.writeString(bodyText)
+        parcel.writeString(byline)
     }
 
     companion object CREATOR : Parcelable.Creator<Field> {

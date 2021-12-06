@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/abril_fatface"
+                    android:fontFamily="@font/old_standard_tt_bold"
                     android:text="Android Name"
                     android:textAppearance="?android:attr/textAppearance" />
 

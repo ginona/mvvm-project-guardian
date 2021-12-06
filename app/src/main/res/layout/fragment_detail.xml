@@ -5,7 +5,8 @@
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/fragment_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/detailView"
@@ -30,6 +31,16 @@
                 android:src="@drawable/ic_launcher_background"
                 app:shapeAppearanceOverlay="@style/customRoundedImageView" />
 
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgNewDarker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxWidth="200dp"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/customRoundedImageView"
+                android:background="@color/black"
+                android:alpha="0.5" />
+
             <TextView
                 android:id="@+id/tvNewTitle"
                 android:layout_width="wrap_content"
@@ -37,22 +48,25 @@
                 android:layout_gravity="bottom|start"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="30dp"
+                android:fontFamily="@font/old_standard_tt_bold"
+                android:shadowColor="@color/black"
                 android:text="New Title"
                 android:textColor="@color/white"
-                android:shadowColor="@color/black"
                 android:textSize="27sp"
-                android:textStyle="bold"
                 tools:layout_editor_absoluteY="422dp" />
 
             <TextView
-                android:id="@+id/tvNew"
+                android:id="@+id/tvByline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:fontFamily="@font/regular_personal"
                 android:text="The Guardian"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+                android:layout_gravity="bottom|start"
+                android:paddingBottom="7dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
 
         </FrameLayout>
 
@@ -61,22 +75,25 @@
             android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/light_personal"
             android:text="New description"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="0.139"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
             android:textColor="@color/black"
             android:textStyle="bold"
-            />
+            android:paddingStart="20dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="395dp" />
+            app:layout_constraintGuide_begin="362dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

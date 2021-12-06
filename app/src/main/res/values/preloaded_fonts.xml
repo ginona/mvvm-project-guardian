@@ -3,5 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/abril_fatface</item>
         <item>@font/im_fell_great</item>
+        <item>@font/old_standard_tt</item>
+        <item>@font/old_standard_tt_bold</item>
     </array>
 </resources>

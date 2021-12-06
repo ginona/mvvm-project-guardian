@@ -16,6 +16,7 @@ class DetailFragment : Fragment() {
     private lateinit var imgNew: ImageView
     private lateinit var tvDescription: TextView
     private  lateinit var result: Result
+    private lateinit var tvByline: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class DetailFragment : Fragment() {
         tvNewTitle = view.findViewById(R.id.tvNewTitle)
         imgNew = view.findViewById(R.id.imgNew)
         tvDescription = view.findViewById(R.id.tvDescription)
+        tvByline = view.findViewById(R.id.tvByline)
         return view
     }
 
@@ -40,5 +42,6 @@ class DetailFragment : Fragment() {
         tvNewTitle.text = result.webTitle
         imgNew.load(result.fields?.thumbnail)
         tvDescription.text = result.fields?.bodyText
+        tvByline.text = result.fields?.byline
     }
 }
