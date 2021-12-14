@@ -8,92 +8,98 @@
     android:fillViewport="true"
     android:background="@color/fragment_background">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/detailView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="visible">
-        <FrameLayout
-            android:id="@+id/frameLayout"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgNew"
+            android:visibility="visible">
+            <FrameLayout
+                android:id="@+id/frameLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="400dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_launcher_background"
-                app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgNewDarker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.5"
-                android:background="@color/black"
-                android:minHeight="400dp"
-                android:scaleType="centerCrop"
-                app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="400dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgNewDarker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:background="@color/black"
+                    android:minHeight="400dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+                <TextView
+                    android:id="@+id/tvNewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="35dp"
+                    android:fontFamily="@font/old_standard_tt_bold"
+                    android:shadowColor="@color/black"
+                    android:text="@string/new_title"
+                    android:textColor="@color/white"
+                    android:paddingEnd="30dp"
+                    android:textSize="27sp"
+                    tools:layout_editor_absoluteY="422dp" />
+
+                <TextView
+                    android:id="@+id/tvByline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular_personal"
+                    android:text="@string/byline"
+                    android:layout_gravity="bottom|start"
+                    android:paddingBottom="15dp"
+                    android:paddingStart="30dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
 
             <TextView
-                android:id="@+id/tvNewTitle"
+                android:id="@+id/tvDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|start"
-                android:layout_marginStart="30dp"
-                android:layout_marginBottom="35dp"
-                android:fontFamily="@font/old_standard_tt_bold"
-                android:shadowColor="@color/black"
-                android:text="@string/new_title"
-                android:textColor="@color/white"
-                android:paddingEnd="30dp"
-                android:textSize="27sp"
-                tools:layout_editor_absoluteY="422dp" />
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/light_personal"
+                android:text="@string/new_description"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingStart="20dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="0.315"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+                android:textScaleX="1.2"/>
 
-            <TextView
-                android:id="@+id/tvByline"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/regular_personal"
-                android:text="@string/byline"
-                android:layout_gravity="bottom|start"
-                android:paddingBottom="15dp"
-                android:paddingStart="30dp"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="362dp" />
 
-        </FrameLayout>
-
-        <TextView
-            android:id="@+id/tvDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/light_personal"
-            android:text="@string/new_description"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:paddingStart="20dp"
-            android:paddingEnd="15dp"
-            android:paddingBottom="20dp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="0.315"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-            android:textScaleX="1.2"/>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="362dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

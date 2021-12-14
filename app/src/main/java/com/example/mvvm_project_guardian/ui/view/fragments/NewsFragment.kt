@@ -25,18 +25,26 @@ class NewsFragment : Fragment() {
     private var listener : (Result) -> Unit = {}
     private lateinit var nAdapter : NewsPagedAdapter
     private val newsViewModel: NewsViewModel by viewModels()
+    private lateinit var mToolbar: Toolbar
+    private lateinit var mBToolbar: Toolbar
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_news, container, false)
+        mToolbar = activity!!.findViewById<View>(R.id.toolbar) as Toolbar
+        mBToolbar = activity!!.findViewById<View>(R.id.back_toolbar) as Toolbar
+
+        mToolbar.visibility = View.VISIBLE
+        mBToolbar.visibility = View.GONE
         recyclerNews = view.findViewById(R.id.recyclerNews)
         return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         initRecyclerView()
         loadingData()
     }
@@ -68,5 +76,10 @@ class NewsFragment : Fragment() {
             addItemDecoration(decoration)
             adapter = nAdapter
         }
+    }
+
+    override fun onResume() {
+
+        super.onResume()
     }
 }
