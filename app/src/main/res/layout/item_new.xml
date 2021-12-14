@@ -35,7 +35,7 @@
                     android:layout_gravity="start"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/old_standard_tt_bold"
-                    android:text="Android Name"
+                    android:text="@string/new_title"
                     android:textAppearance="?android:attr/textAppearance" />
 
             </LinearLayout>

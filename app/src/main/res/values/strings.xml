@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">mvvm-project-guardian</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">The Guardian</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_title">New Title</string>
+    <string name="byline">Tv Byline</string>
+    <string name="new_description">New Description</string>
 </resources>
