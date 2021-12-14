@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import coil.api.load
 import com.example.mvvm_project_guardian.R
 import com.example.mvvm_project_guardian.data.model.Result
@@ -17,6 +18,7 @@ class DetailFragment : Fragment() {
     private lateinit var tvDescription: TextView
     private  lateinit var result: Result
     private lateinit var tvByline: TextView
+    private lateinit var mToolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,8 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_detail, container, false)
+        mToolbar = activity!!.findViewById<View>(R.id.toolbar) as Toolbar
+
         tvNewTitle = view.findViewById(R.id.tvNewTitle)
         imgNew = view.findViewById(R.id.imgNew)
         tvDescription = view.findViewById(R.id.tvDescription)
@@ -39,6 +43,7 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mToolbar.visibility = View.GONE
         tvNewTitle.text = result.webTitle
         imgNew.load(result.fields?.thumbnail)
         tvDescription.text = result.fields?.bodyText
