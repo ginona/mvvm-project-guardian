@@ -60,18 +60,39 @@
                     android:textSize="27sp"
                     tools:layout_editor_absoluteY="422dp" />
 
-                <TextView
-                    android:id="@+id/tvByline"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/regular_personal"
-                    android:text="@string/byline"
                     android:layout_gravity="bottom|start"
                     android:paddingBottom="15dp"
-                    android:paddingStart="30dp"
-                    android:textColor="@color/white"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
+                    android:paddingStart="30dp">
+                    <TextView
+                        android:id="@+id/tvByline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular_personal"
+                        android:text="@string/byline"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:paddingEnd="10dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="|"
+                        android:textColor="@color/white"/>
+                    <com.example.mvvm_project_guardian.ui.customviews.DigitalClockCustomView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12:33"
+                        android:textColor="@color/white"
+                        android:paddingStart="10dp"
+                        android:id="@+id/txt_custom_clock"
+                        app:dateFormat="HH:mm"
+                        android:layout_marginTop="3dp"
+                        style="@style/digitalClock"/>
+                </LinearLayout>
 
             </FrameLayout>
 
@@ -80,18 +101,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:fontFamily="@font/light_personal"
+                style="@style/customfontstyle"
                 android:text="@string/new_description"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:paddingStart="20dp"
                 android:paddingEnd="15dp"
                 android:paddingBottom="20dp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintHorizontal_bias="0.315"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-                android:textScaleX="1.2"/>
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"

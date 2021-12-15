@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.view.activities.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/fragment_background">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/back_toolbar"
@@ -18,7 +19,8 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white">
         <ImageView
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -31,10 +33,10 @@
             android:layout_height="wrap_content"
             android:text="12:33"
             android:id="@+id/txt_custom_clock"
-            app:dateFormat="HH:mm a"
+            app:dateFormat="hh:mm a"
             android:layout_gravity="end"
             android:layout_marginEnd="30dp"
-            android:textSize="15sp"/>
+            style="@style/digitalClock"/>
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView

@@ -25,4 +25,16 @@
         <item name="cornerSizeBottomRight">5%</item>
         <item name="cornerSizeBottomLeft">5%</item>
     </style>
+
+    <style name="customfontstyle" parent="">
+        <item name="fontFamily">@font/light_personal</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="digitalClock" parent="">
+        <item name="fontFamily">@font/digital</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
 </resources>
